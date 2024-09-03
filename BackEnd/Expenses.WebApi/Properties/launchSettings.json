@@ -1,0 +1,37 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:27454",
+      "sslPort": 44384
+    }
+  },
+  "profiles": {
+    "Expenses.WebApi": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "https://localhost:7029;http://localhost:5171",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "JWT_SECRET": "This is my super duper secret This is my super duper secret",
+        "JWT_ISSUER": "My Expenses",
+        "CLIENT_ID": "280406322702-9pv8nvt3vve3r6jlqs2r4am38vtfpi0m.apps.googleusercontent.com"
+      }
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "JWT_SECRET": "This is my super duper secret This is my super duper secret",
+        "JWT_ISSUER": "My Expenses",
+        "CLIENT_ID": "280406322702-9pv8nvt3vve3r6jlqs2r4am38vtfpi0m.apps.googleusercontent.com"
+      }
+    }
+  }
+}
