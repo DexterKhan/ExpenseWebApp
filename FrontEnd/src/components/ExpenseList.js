@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { GetExpenses } from '../services/expenses';
+import { GetCategories } from '../services/categories';
 import { Button, Col, Row } from 'react-bootstrap';
 import ExpenseForm from './ExpenseForm';
 
@@ -11,6 +12,10 @@ export default () => {
     useEffect(() => {
         GetExpenses(dispatch);
     }, []);
+
+    useEffect(() => {
+        GetCategories(dispatch);
+    }, [dispatch]);
 
     return expenses.map(e =>
         <div key={e.id} style={{ marginBottom: '1rem' }} >
