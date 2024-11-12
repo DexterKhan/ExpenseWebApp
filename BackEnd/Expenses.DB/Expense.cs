@@ -11,5 +11,7 @@ namespace Expenses.DB
         public double Amount { get; set; }
         [ForeignKey("UserId")]
         public User User { get; set; }
+        [ForeignKey("CategoryId")]
+        public Category? Category { get; set; }
     }
 }

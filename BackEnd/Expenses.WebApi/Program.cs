@@ -31,6 +31,7 @@ namespace Expenses.WebApi
             builder.Services.AddTransient<IExpensesServices, ExpensesServices>();
             builder.Services.AddTransient<IUserService, UserService>();
             builder.Services.AddTransient<IStatisticsServices, StatisticsServices>();
+            builder.Services.AddTransient<ICategoryServices, CategoryService>();
             builder.Services.AddTransient<IPasswordHasher, PasswordHasher>();
             builder.Services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
             
@@ -42,6 +43,10 @@ namespace Expenses.WebApi
                         return "CoreExpense";
                     if (type == typeof(Expenses.DB.Expense))
                         return "DbExpense";
+                    if (type == typeof(Expenses.Core.DTO.Category))
+                        return "CoreCategory";
+                    if (type == typeof(Expenses.DB.Category))
+                        return "DbCategory";
 
                     return type.FullName;
 
