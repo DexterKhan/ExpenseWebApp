@@ -7,7 +7,8 @@ import { useDispatch, useSelector } from "react-redux";
 import HomePage from "./components/HomePage";
 import { useEffect } from "react";
 import { userAuthenticated } from "./app/authenticationSlice";
-
+import Header from "./app/Header";
+import DynamicThemeColor from "./app/DynamicThemeColor";
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
   }, [])
 
   return <BrowserRouter>
+    <DynamicThemeColor />
     <Navbar />
     <Routes>
       <Route path="/" element={isLoggedIn ? <HomePage /> : <SignInPage />} />
