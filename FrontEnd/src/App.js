@@ -10,6 +10,7 @@ import { userAuthenticated } from "./app/authenticationSlice";
 
 
 
+
 const App = () => {
   const { isLoggedIn } = useSelector(state => state.authenticationSlice);
   const dispatch = useDispatch();
@@ -22,6 +23,7 @@ const App = () => {
   }, [])
 
   return <BrowserRouter>
+    {/* <DynamicThemeColor /> */}
     <Navbar />
     <Routes>
       <Route path="/" element={isLoggedIn ? <HomePage /> : <SignInPage />} />
